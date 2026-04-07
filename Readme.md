@@ -1,6 +1,15 @@
 
 ````md
-# ShadowSurf for KALI
+  ____  _               _              ____              __
+ / ___|| |__   __ _  __| | _____      / ___| _   _ _ __ / _|
+ \___ \| '_ \ / _` |/ _` |/ _ \ \ /\ / / _ \| | | | '__| |_
+  ___) | | | | (_| | (_| | (_) \ V  V / (_) | |_| | |  |  _|
+ |____/|_| |_|\__,_|\__,_|\___/ \_/\_/ \___/ \__,_|_|  |_|
+
+                 ShadowSurf for KALI
+
+     transparent Tor routing for local host
+            
 
 **Creator:** Bluuhaxor
 
