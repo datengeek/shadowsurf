@@ -1,4 +1,3 @@
-
 ````md
   ____  _               _              ____              __
  / ___|| |__   __ _  __| | _____      / ___| _   _ _ __ / _|
@@ -8,8 +7,7 @@
 
                  ShadowSurf for KALI
 
-     transparent Tor routing for local host
-            
+     transparent Tor routing for the local host
 
 **Creator:** Bluuhaxor
 
@@ -59,11 +57,11 @@ sudo systemctl status tor@default --no-pager
 
 ## Installation
 
-Save the installer as `install.sh`, then run:
+From the project directory, run:
 
 ```bash
-chmod +x install.sh
-sudo ./install.sh
+chmod +x shadowsurf.sh
+sudo ./shadowsurf.sh
 ```
 
 This will install:
@@ -72,6 +70,16 @@ This will install:
 * `/usr/local/bin/shadow-stop`
 * `/usr/local/bin/shadow-status`
 * `/usr/local/bin/shadow-restart`
+
+## Project files
+
+The repository contains:
+
+* `Readme.md`
+* `LICENSE`
+* `shadowsurf.sh`
+
+After installation, the helper commands are placed in `/usr/local/bin`.
 
 ## Usage
 
@@ -104,7 +112,7 @@ sudo shadow-stop
 After starting, test with:
 
 ```bash
-dig example.com
+dig @127.0.0.1 -p 9053 example.com
 curl https://check.torproject.org/api/ip
 curl https://ifconfig.me
 journalctl -u tor@default -n 50 --no-pager | grep 'Bootstrapped'
@@ -115,7 +123,7 @@ Expected result:
 * DNS resolution works
 * `check.torproject.org` returns `"IsTor": true`
 * your visible IP is a Tor exit IP
-* bootsrap should be by 100 % in a few seconds
+* Tor reaches `Bootstrapped 100% (done): Done`
 
 ## Notes
 
@@ -139,3 +147,5 @@ The installer places these commands in `/usr/local/bin`:
 ShadowSurf for KALI is a custom transparent Tor routing setup inspired by Anonsurf-style behavior. It is not the original Anonsurf package.
 
 ```
+
+
